@@ -30,10 +30,9 @@ _Nếu video không chạy, hãy bấm vào [Link dự phòng tại đây](https
 <h3>Bước 2: Cấu hình Extension</h3>
 
 Trước khi cài đặt, bạn cần dán API Key vừa lấy vào code:
-<li>Mở thư mục chứa code của tool.</li>
-<li>Chuột phải vào file <strong>popup.js</strong>, chọn Open with Notepad (hoặc VS Code).</li>
-<li>Tìm dòng đầu tiên trong hàm callGeminiAPI:
-</li>
+* Mở thư mục chứa code của tool.
+* Chuột phải vào file `popup.js`, chọn Open with Notepad (hoặc VS Code).
+* Tìm dòng đầu tiên trong hàm callGeminiAPI:
 
 ```javascript
 const API_KEY = "PUT_YOUR_API_HERE"; // Dán API Key của bạn vào đây
