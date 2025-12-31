@@ -20,12 +20,12 @@ _Nếu video không chạy, hãy bấm vào [Link dự phòng tại đây](https
 
 <h3>Bước 1: Lấy API của Gemini</h3>
 Để công cụ hoạt động, bạn cần một chìa khóa (API Key) từ Google. Nó hoàn toàn miễn phí.
-<li>Truy cập: <a herf= https://aistudio.google.com/api-keys>Google AI Studio.</a></li>
-<li>Đăng nhập bằng tài khoản Google (Gmail) của bạn.
-</li>
-<li>Nhấn vào nút Create API key.</li>
-<li>Chọn Create API key in new project.</li>
-<li>Copy đoạn mã bắt đầu bằng AIza... đó lại.</li>
+
+* Truy cập: <a herf= https://aistudio.google.com/api-keys>Google AI Studio.</a>
+* Đăng nhập bằng tài khoản Google (Gmail) của bạn.
+* Nhấn vào nút Create API key.
+* Chọn Create API key in new project.
+* Copy đoạn mã bắt đầu bằng AIza... đó lại.
 
 <h3>Bước 2: Cấu hình Extension</h3>
 
@@ -40,21 +40,20 @@ const API_KEY = "PUT_YOUR_API_HERE"; // Dán API Key của bạn vào đây
 
 <h3>Bước 3: Cài đặt lên trình duyệt</h3>
 Công cụ này chưa có trên Store, bạn cần cài đặt thủ công (Sideload) như sau:
-<li>Ở trong Browser > chọn Extension > chọn Manage Extension.</li>
-<li>Bật công tắc Developer mode ở góc trên bên phải.</li>
-<li>Nhấn nút Load unpacked.</li>
-<li>Chọn thư mục chứa code.</li>
+
+* Ở trong Browser > chọn Extension > chọn Manage Extension.
+* Bật công tắc Developer mode ở góc trên bên phải.
+* Nhấn nút Load unpacked.
+* Chọn thư mục chứa code.
 
 <h3>Bước 4: Sử dụng công cụ</h3>
 
-<li>Truy cập trang chat Crisp.</li>
-<li>Mở một cuộc hội thoại với khách hàng.
-</li>
-<li>Nhấn vào biểu tượng Extension trên thanh công cụ trình duyệt.</li>
-<li>Nhấn nút Get Summary, đợi khoảng 2-3 giây để AI phân tích.
-</li>
-<li>Nhấn nút Copy Result (màu xanh lá) hiện ra bên dưới.</li>
-<li>Dán (Paste) vào phần Private Note trên Crisp</li>
+* Truy cập trang chat Crisp.
+* Mở một cuộc hội thoại với khách hàng.
+* Nhấn vào biểu tượng Extension trên thanh công cụ trình duyệt.
+* Nhấn nút Get Summary, đợi khoảng 2-3 giây để AI phân tích.
+* Nhấn nút Copy Result (màu xanh lá) hiện ra bên dưới.
+* Dán (Paste) vào phần Private Note trên Crisp
 
 <h2>Lưu ý quan trọng</h2>
 
