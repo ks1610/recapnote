@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 320px; font-family: sans-serif; padding: 10px; }
+    
+    button { width: 100%; padding: 10px; color: white; border: none; cursor: pointer; border-radius: 4px; font-weight: bold; }
+    
+    #summarizeBtn { background: #0078D4; }
+    #summarizeBtn:hover { background: #005a9e; }
+
+    #copyBtn { 
+        background: #107c10; 
+        margin-top: 10px; 
+        display: none; 
+    }
+    #copyBtn:hover { background: #0b5a0b; }
+
+    #result { margin-top: 15px; white-space: pre-wrap; font-size: 13px; line-height: 1.4; color: #333; }
+    .loading { color: gray; font-style: italic; text-align: center; margin-top: 10px;}
+  </style>
+</head>
+<body>
+  <h3>Chat Summarizer</h3>
+  
+  <button id="summarizeBtn">Get Summary</button>
+  
+  <div id="result"></div>
+  
+  <button id="copyBtn">Copy Result</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
