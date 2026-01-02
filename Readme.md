@@ -59,18 +59,4 @@ Công cụ này chưa có trên Store, bạn cần cài đặt thủ công (Side
 
 <li><strong>Bảo mật:</strong> Không chia sẻ file popup.js chứa API Key của bạn cho người lạ.</li>
 <li><strong>Lỗi không chạy:</strong> Nếu bấm nút mà không thấy gì, hãy thử F5 lại trang Crisp hoặc kiểm tra xem bạn đã dán đúng API Key chưa.</li>
-<li><strong>Hạn mức:</strong> Key miễn phí của Google cho phép gọi rất nhiều lần trong ngày, thoải mái cho nhu cầu Support cá nhân.</li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<li><strong>Hạn mức:</strong> Với API Key miễn phí của Google nên số lần request có thể bị hạn chế.</li>
