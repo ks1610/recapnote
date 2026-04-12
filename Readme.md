@@ -4,7 +4,7 @@ Crisp Recap Note là công cụ cho Fontline giúp tạo tóm tắt đoạn hộ
 
 ## Video Demo
 
-[![Xem hướng dẫn](image.png)](https://monosnap.ai/file/cdQruBuEcmqPzxvPYuu25GHwCwB1AH)
+[![Xem hướng dẫn](image.png)](crispsummary.mp4)
 
 _Nếu video không chạy, hãy bấm vào [Link dự phòng tại đây](https://github.com/ks1610/recapnote/blob/master/crispsummary.mp4)_
 
