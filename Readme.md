@@ -1,66 +1,81 @@
-<h1>Crisp Recap Note Tool</h1>
+# Crisp Recap Note Tool
 
-Crisp Recap Note là công cụ cho Fontline giúp tạo tóm tắt đoạn hội thoại, công cụ sử dụng trự tiếp API của Gemini, có thể tóm tắt những diễn biến của cuộc hội thoại trong vòng một ca làm việc của Fontline, công cụ này có thể được sử dụng để nắm bắt được diễn biến của ca trước đó hoặc sử dụng để tạo recap note khi kết thúc ca làm
+Crisp Recap Note là công cụ cho Fontline giúp tạo tóm tắt đoạn hội thoại. Công cụ sử dụng trực tiếp API của Gemini, có thể tóm tắt những diễn biến của cuộc hội thoại trong vòng một ca làm việc của Fontline. Công cụ này có thể được sử dụng để nắm bắt được diễn biến của ca trước đó hoặc để tạo recap note khi kết thúc ca làm.
 
-<h2>Video Demo:</h2>
+## Video Demo
 
-[![Xem hướng dẫn](/recap/image.png)](https://monosnap.ai/file/cdQruBuEcmqPzxvPYuu25GHwCwB1AH)
+[![Xem hướng dẫn](image.png)](https://monosnap.ai/file/cdQruBuEcmqPzxvPYuu25GHwCwB1AH)
 
 _Nếu video không chạy, hãy bấm vào [Link dự phòng tại đây](https://github.com/ks1610/recapnote/blob/master/crispsummary.mp4)_
 
-<h2>Các tính năng chính:</h2>
-<li>Tự động tóm tắt: Quét nội dung tin nhắn trong phiên làm việc (hoặc 3h15' gần nhất).</li>
-<li>Chỉ lấy nội dung mới sau lần Recap cuối cùng.</li>
-<li>Chuẩn hóa Status: Tự động xác định trạng thái:</li>
-- fixed: đã được khắc phục.<br>
-- ww for response: Đang chờ khách trả lời.<br>
-- cw for dev: Đã chuyển kỹ thuật/Dev kiểm tra.
+## Các tính năng chính
 
-<h2>Hướng dẫn sử dụng tool</h2>
+- **Tự động tóm tắt:** Quét nội dung tin nhắn trong phiên làm việc (hoặc 3 giờ 15 phút gần nhất).
+- **Chỉ lấy nội dung mới** sau lần Recap cuối cùng.
+- **Chuẩn hóa Status:** Tự động xác định trạng thái:
+  - `fixed` — đã được khắc phục.
+  - `ww for response` — đang chờ khách trả lời.
+  - `cw for dev` — đã chuyển kỹ thuật/Dev kiểm tra.
 
-<h3>Bước 0: Tải mô hình về thiết bị cá nhân</h3>
+---
 
-* Ở góc phải màn hình > Chọn <a style = "color: white;background-color: #2e9a40; padding: 5px; border-radius: 5px;"> <> Code </a> &nbsp; chọn `Download Zip`.
-* Giải nén file zip.
+## Hướng dẫn sử dụng tool
 
-<h3>Bước 1: Lấy API của Gemini</h3>
-Để công cụ hoạt động, bạn cần một chìa khóa (API Key) từ Google. Nó hoàn toàn miễn phí.
+### Bước 0: Tải mô hình về thiết bị cá nhân
 
-* Truy cập: <a herf= https://aistudio.google.com/api-keys style = "cursor: pointer;">Google AI Studio.</a>
-* Đăng nhập bằng tài khoản Google (Gmail) của bạn.
-* Nhấn vào nút Create API key.
-* Chọn Create API key in new project.
-* Copy đoạn mã bắt đầu bằng AIza... đó lại.
+1. Ở góc phải màn hình, chọn **`<> Code`** → chọn **`Download ZIP`**.
+2. Giải nén file zip.
 
-<h3>Bước 2: Cấu hình Extension</h3>
+---
 
-Tạo một file mới tên `config.js`
-* Dán code dưới đây:
+### Bước 1: Lấy API Key của Gemini
+
+Để công cụ hoạt động, bạn cần một chìa khóa (API Key) từ Google. Nó hoàn toàn **miễn phí**.
+
+1. Truy cập: [Google AI Studio](https://aistudio.google.com/api-keys)
+2. Đăng nhập bằng tài khoản Google (Gmail) của bạn.
+3. Nhấn vào nút **Create API key**.
+4. Chọn **Create API key in new project**.
+5. Copy đoạn mã bắt đầu bằng `AIza...` lại.
+
+---
+
+### Bước 2: Cấu hình Extension
+
+Tạo một file mới tên `config.js` và dán code dưới đây:
+
 ```javascript
 const CONFIG = {
-    GEMINI_API_KEY: "YOUR_API_KEY_HERE" //API key lấy được ở bước 1
+    GEMINI_API_KEY: "YOUR_API_KEY_HERE" // API key lấy được ở bước 1
 };
 ```
 
-<h3>Bước 3: Cài đặt lên trình duyệt</h3>
+---
+
+### Bước 3: Cài đặt lên trình duyệt
+
 Công cụ này chưa có trên Store, bạn cần cài đặt thủ công (Sideload) như sau:
 
-* Ở trong Browser > chọn `Extension` > chọn `Manage Extension`.
-* Bật công tắc `Developer mode` ở góc trên bên phải.
-* Nhấn nút `Load unpacked`.
-* Chọn thư mục chứa code.
+1. Trong trình duyệt, chọn **Extensions** → **Manage Extensions**.
+2. Bật công tắc **Developer mode** ở góc trên bên phải.
+3. Nhấn nút **Load unpacked**.
+4. Chọn thư mục chứa code.
 
-<h3>Bước 4: Sử dụng công cụ</h3>
+---
 
-* Truy cập trang chat <a herf = "https://app.crisp.chat/website/">Crisp</a>.
-* Mở một cuộc hội thoại với khách hàng.
-* Nhấn vào biểu tượng `Extension` trên thanh công cụ trình duyệt.
-* Nhấn nút <a style = "width: 100%; padding: 4px; color: white; border: none; cursor: pointer; border-radius: 4px; font-weight: bold;background: #0078D4;"> Get Summary </a>, đợi khoảng 2-3 giây để AI phân tích.
-* Nhấn nút <a style = "width: 100%; padding: 4px; color: white; border: none; cursor: pointer; border-radius: 4px; font-weight: bold;background: #107c10;">Copy Result</a> hiện ra bên dưới.
-* Dán (Paste) vào phần `Private Note` trên Crisp
+### Bước 4: Sử dụng công cụ
 
-<h2>Lưu ý quan trọng</h2>
+1. Truy cập trang chat [Crisp](https://app.crisp.chat/website/).
+2. Mở một cuộc hội thoại với khách hàng.
+3. Nhấn vào biểu tượng **Extensions** trên thanh công cụ trình duyệt.
+4. Nhấn nút **Get Summary**, đợi khoảng 2–3 giây để AI phân tích.
+5. Nhấn nút **Copy Result** hiện ra bên dưới.
+6. Dán (Paste) vào phần **Private Note** trên Crisp.
 
-<li><strong>Bảo mật:</strong> Không chia sẻ file config.js chứa API Key của bạn cho người lạ.</li>
-<li><strong>Lỗi không chạy:</strong> Nếu bấm nút mà không thấy gì, hãy thử F5 lại trang Crisp hoặc kiểm tra xem bạn đã dán đúng API Key chưa.</li>
-<li><strong>Hạn mức:</strong> Với API Key miễn phí của Google nên số lần request có thể bị hạn chế.</li>
+---
+
+## Lưu ý quan trọng
+
+- **Bảo mật:** Không chia sẻ file `config.js` chứa API Key của bạn cho người lạ.
+- **Lỗi không chạy:** Nếu bấm nút mà không thấy gì, hãy thử F5 lại trang Crisp hoặc kiểm tra xem bạn đã dán đúng API Key chưa.
+- **Hạn mức:** Với API Key miễn phí của Google, số lần request có thể bị hạn chế.
