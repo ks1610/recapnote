@@ -166,13 +166,6 @@ async function callGeminiAPI(text) {
         SUFFIX LOGIC (Choose one ONLY if the conversation ended with Frontline's message):
         - IF the action involves escalating to the developer team or checking with them: append ", cw for dev"
         - ELSE IF the customer has NOT replied: append ", ww for response"
-<<<<<<< HEAD
-=======
-        <Write a note recap as short as possible for next Operator to understand the issue.>
-
-        ---
-        Conversation content:
->>>>>>> 386f401365560d263ce14ecf66095399eb3f6a96
     ${text}
     `;
 
